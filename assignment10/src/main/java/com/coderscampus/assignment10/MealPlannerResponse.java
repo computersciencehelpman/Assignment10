@@ -1,30 +1,30 @@
 package com.coderscampus.assignment10;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MealPlannerResponse {
 
+	String numCalories; 
+	String diet;
+	String exclusions;
 	
-	
-	@JsonProperty("timeFrame")
-	private timeFrame timeFrame;
-	
-	@JsonProperty("Time Series (5min)")
-	private TimeSeries timeSeries;
-	
-	public MetaData getMetaData() {
-		return metaData;
+	public String getNumCalories() {
+		return numCalories;
 	}
-	public void setMetaData(MetaData metaData) {
-		this.metaData = metaData;
+	public void setNumCalories(String numCalories) {
+		this.numCalories = numCalories;
 	}
-	public TimeSeries getTimeSeries() {
-		return timeSeries;
+	public String getDiet() {
+		return diet;
 	}
-	public void setTimeSeries(TimeSeries timeSeries) {
-		this.timeSeries = timeSeries;
+	public void setDiet(String diet) {
+		this.diet = diet;
 	}
-	
+	public String getExclusions() {
+		return exclusions;
+	}
+	public void setExclusions(String exclusions) {
+		this.exclusions = exclusions;
+	}
 	
 }
