@@ -22,11 +22,13 @@ RestTemplate rt = new RestTemplate();
 									  .queryParam("targetCalories", numCalories)
 									  .queryParam("diet", diet)
 									  .queryParam("exclude", exclusions)
-									  .queryParam("apikey", "8b7557100eeb4124905f42c0d5669e08")
+									  .queryParam("apiKey", "cbcbfd20344946b09819e0a7d4b6fdb8")
 									  .build()
 									  .toUri();
 		
 		WeekResponse weekResponse = rt.getForObject(uri, WeekResponse.class);
+		System.out.println("Generated URI: " + uri.toString());
+
 		return ResponseEntity.ok(weekResponse);
 	}
 
@@ -38,10 +40,12 @@ RestTemplate rt = new RestTemplate();
 				  .queryParam("timeFrame", "day")
 				  .queryParam("targetCalories", numCalories)
 				  .queryParam("exclude", exclusions)
-				  .queryParam("apikey", "8b7557100eeb4124905f42c0d5669e08")
+				  .queryParam("apiKey", "cbcbfd20344946b09819e0a7d4b6fdb8")
 				  .build()
 				  .toUri();
 		DayResponse dayResponse = rt.getForObject(uri, DayResponse.class);
+		System.out.println("Generated URI: " + uri.toString());
+
 		return ResponseEntity.ok(dayResponse);
 	}
 
