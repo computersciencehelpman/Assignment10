@@ -2,12 +2,19 @@ package com.coderscampus.assignment10;
 
 public class Meal {
 
+	private int id;
 	private String title;
 	private String imageType;
 	private int readyInMinutes;
+	private int servings;
 	private String sourceUrl;
 	
-	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -23,6 +30,12 @@ public class Meal {
 	public int getReadyInMinutes() {
 		return readyInMinutes;
 	}
+	public int getServings() {
+		return servings;
+	}
+	public void setServings(int servings) {
+		this.servings = servings;
+	}
 	public void setReadyInMinutes(int readyInMinutes) {
 		this.readyInMinutes = readyInMinutes;
 	}
@@ -32,4 +45,10 @@ public class Meal {
 	public void setSourceUrl(String sourceUrl) {
 		this.sourceUrl = sourceUrl;
 	}
+	@Override
+	public String toString() {
+		return "Meal [id=" + id + ", title=" + title + ", imageType=" + imageType + ", readyInMinutes=" + readyInMinutes
+				+ ", servings=" + servings + ", sourceUrl=" + sourceUrl + "]";
+	}
+	
 }
