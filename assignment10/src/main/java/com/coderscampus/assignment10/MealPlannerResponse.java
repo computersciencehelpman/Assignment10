@@ -1,7 +1,4 @@
 package com.coderscampus.assignment10;
-
-
-
 public class MealPlannerResponse {
 
 	String numCalories; 
@@ -25,6 +22,5 @@ public class MealPlannerResponse {
 	}
 	public void setExclusions(String exclusions) {
 		this.exclusions = exclusions;
-	}
-	
+	}	
 }

@@ -31,6 +31,4 @@ public class Nutrients {
 	public void setCarbohydrates(float carbohydrates) {
 		this.carbohydrates = carbohydrates;
 	}
-	
-
 }

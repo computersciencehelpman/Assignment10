@@ -1,17 +1,18 @@
 package com.coderscampus.assignment10;
 
-import java.util.List;
+import java.util.Map;
 
 public class WeekResponse {
-    private List<DayResponse> days;
+    private Map<String, DayResponse> week; // Maps "monday", "tuesday", etc., to a DayResponse
 
-    // Getters and setters
-
-    public List<DayResponse> getDays() {
-        return days;
+    public Map<String, DayResponse> getWeek() {
+        return week;
     }
 
-    public void setDays(List<DayResponse> days) {
-        this.days = days;
+    public void setWeek(Map<String, DayResponse> week) {
+        this.week = week;
     }
 }
+
+
+

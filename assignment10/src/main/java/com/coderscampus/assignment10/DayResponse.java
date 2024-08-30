@@ -4,8 +4,8 @@ import java.util.List;
 
 public class DayResponse {
 
-	private List<Meal> meals;
-	private Nutrients nutrients;
+	private List<Meal> meals;        // A list of Meal objects
+	private Nutrients nutrients;     // Nutrients for the day
 	
 	public List<Meal> getMeals() {
 		return meals;

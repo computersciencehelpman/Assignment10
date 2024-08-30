@@ -26,8 +26,19 @@ RestTemplate rt = new RestTemplate();
 									  .build()
 									  .toUri();
 		
-		WeekResponse weekResponse = rt.getForObject(uri, WeekResponse.class);
+	//	WeekResponse weekResponse = rt.getForObject(uri, WeekResponse.class);
+		
+		//Log the generated URI
 		System.out.println("Generated URI: " + uri.toString());
+		
+		//Fetch the raw JSON response as a String
+		String jsonResponse = rt.getForObject(uri, String.class);
+		
+		//Log the raw JSON response
+		System.out.println("Raw JSON Response: "+ jsonResponse);
+		
+		//Convert the JSON response into WeekResponse
+		WeekResponse weekResponse = rt.getForObject(uri,  WeekResponse.class);
 
 		return ResponseEntity.ok(weekResponse);
 	}
@@ -43,12 +54,25 @@ RestTemplate rt = new RestTemplate();
 				  .queryParam("apiKey", "cbcbfd20344946b09819e0a7d4b6fdb8")
 				  .build()
 				  .toUri();
-		DayResponse dayResponse = rt.getForObject(uri, DayResponse.class);
-		System.out.println("Generated URI: " + uri.toString());
+		//DayResponse dayResponse = rt.getForObject(uri, DayResponse.class);
+		
+		//Log the generated URI
+				System.out.println("Generated URI: " + uri.toString());
+				
+				//Fetch the raw JSON response as a String
+				String jsonResponse = rt.getForObject(uri, String.class);
+				
+				//Log the raw JSON response
+				System.out.println("Raw JSON Response: "+ jsonResponse);
+				
+				//Convert the JSON response into WeekResponse
+				DayResponse dayResponse = rt.getForObject(uri,  DayResponse.class);
+
 
 		return ResponseEntity.ok(dayResponse);
 	}
 
+	
 
 
 }
